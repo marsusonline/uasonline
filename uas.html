@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UAS</title>
+
+</head>
+<body>
+<h1><p align="center">SELEKSI PENERIMAAN KARYAWAN PT. ABC</p></h1>
+<h5><p
+align="center">==============================================================================================</p></h5>
+<marquee>Selamat Datang di Website Ujian Akhir Semester</marquee>
+<p align="center">
+<a href="index.html">HOME</a> |
+<a href="uas.html">SOAL</a> |
+<a href="segar.html">REFRESHING</a>
+
+	<div align="center">
+		<table>
+			<tr align="center">
+				<td>KRITERIA</td>
+				<td>NILAI (0-10)</td>
+			</tr>
+			<tr>
+				<td>1. Mengerjakan Sholat 5 Waktu</td>
+				<td><input type="text" name="" id="nilai1" size="2"></td>	
+			</tr>
+			<tr>
+				<td>2. Kebiasaan Disiplin</td>
+				<td><input type="text" name="" id="nilai2" size="2"></td>
+        	</tr>
+        	<tr>
+        		<td>3. Pengalaman Kerja</td>
+        		<td><input type="text" name="" id="nilai3" size="2"></td>
+        	</tr>
+        	<tr>
+        		<td>4. Prestasi Kerja</td>
+        		<td><input type="text" name="" id="nilai4" size="2"></td>				
+			</tr>
+			<tr>
+        		<td>---------------------------------------------</td>
+        		<td>---------------</td>				
+			</tr>
+			<tr>
+				<td>Nilai Rata-rata</td>
+				<td><label id="nilairata"></label></td>
+        	</tr>
+        	<tr>
+				<td>Keterangan</td>
+				<td><label id="nilaiket"></label></td>
+        	</tr>
+        	<tr>
+        		<td>
+        		<input type="button"  value="Seleksi" id="hitung" onclick="hitung();">
+        		<input type="Reset" name="" value="Reset">
+        		</td>
+        	</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		function hitung() {
+		var n1 = parseInt (document.getElementById('nilai1').value);
+		var n2 = parseInt (document.getElementById('nilai2').value);
+		var n3 = parseInt (document.getElementById('nilai3').value);
+		var n4 = parseInt (document.getElementById('nilai4').value);
+		var rata = (n1 + n2 + n3 + n4)/4;
+		document.getElementById('nilairata').innerHTML = rata;
+		if(rata>=85){
+			document.getElementById('nilaiket').innerHTML ='DITERIMA';
+		}else{
+		if(rata>=65){
+			document.getElementById('nilaiket').innerHTML ='DIPERTIMBANGKAN';
+		}else{
+			document.getElementById('nilaiket').innerHTML ='TIDAK DITERIMA';
+		}
+		}
+	}
+</script>
+</body>
+</html>
